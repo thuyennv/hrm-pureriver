@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "laravel-elixir": "^2.0.0"
+  },
+  "dependencies": {
+  	"particles.js": "^2.0.0"
+  }
+}

@@ -1,0 +1,612 @@
+/**
+ * Import libs
+ */
+@import '../../../public/bower_components/bootstrap/less/bootstrap.less';
+
+/**
+ * Define variables
+ */
+@base-width: 100%;
+@main-dark-color: #191c42;
+@main-light-color: #d9c59e;
+@link-color: @main-light-color;
+@sub-font: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+@general-font: "Roboto Slab",sans-serif;
+
+html {
+	font-family: @general-font;
+}
+body {
+	overflow-x: hidden;
+	padding: 0 !important;
+}
+h1, h2, h3, h4 {
+	font-family: @general-font;
+}
+hr {
+	margin: 10px 0;
+	border-color: #666;
+}
+.mg0 {
+	margin: 0;
+}
+.mb20 {
+	margin-bottom: 20px;
+}
+.text-primary {
+	color: darken(@main-light-color, 20%);
+}
+.navbar-default {
+	background-color: transparent;
+	padding: 20px 0;
+	-webkit-transition: padding .3s;
+	-moz-transition: padding .3s;
+	transition: padding .3s;
+	border: 0;
+
+	.navbar-collapse {
+		border-color: rgba(255,255,255,.02);
+	}
+
+	.nav li a {
+		text-transform: uppercase;
+		font-weight: 400;
+		color: #fff;
+		font-size: 12px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		&:hover {
+			color: @main-light-color;
+		}
+	}
+
+	.nav .active a,
+	.nav .active a:hover {
+		color: @main-light-color;
+		background-color: transparent;
+	}
+}
+.navbar-nav {
+	padding-top: 5px;
+}
+.navbar-shrink {
+	background-color: rgba(34,34,34,.8);
+	padding: 10px 0;
+}
+.text_desc {
+	font-size: 16px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+header {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	color: #fff;
+
+	.intro-text {
+		padding-top: 250px;
+		padding-bottom: 50px;
+		background: url('/images/met-stars.png') no-repeat top left;
+		.intro-lead-in {
+			font-family: @general-font;
+			font-weight: 200;
+			width: 535px;
+			font-style: italic;
+			font-size: 17px;
+			line-height: 27px;
+			margin: 0 auto 25px;
+		}
+		.intro-heading {
+			width: 700px;
+			font-family: @general-font;
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: 40px;
+			line-height: 65px;
+			margin: 0 auto 25px;
+		}
+	}
+}
+#particles-js {
+	background-color: @main-dark-color;
+	position: relative;
+	height: 650px;
+	canvas {
+		position: absolute;
+		top: 0; left: 0;
+		z-index: 1;
+	}
+}
+// #header-content-box {
+// 	display: block;
+
+// 	canvas {
+// 		position: absolute;
+// 		top: 0; left: 0;
+// 		z-index: -1;
+// 	}
+// }
+#intro {
+	padding: 60px 0;
+}
+blockquote {
+	background: #f9f9f9;
+	border-left: 10px solid #ccc;
+	margin: 1.5em 10px;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+	color: #ccc;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+blockquote p {
+	font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+	width: 600px;
+	font-style: italic;
+	display: inline;
+}
+.home-blk {
+	padding: 20px 0 0;
+	position: relative;
+	// margin-bottom: 40px;
+	&:before {
+		width: 70px;
+		margin: 0 auto;
+		position: relative;
+		top: 3.9em;
+		border-bottom: 2px solid @main-light-color;
+	}
+	.home-blk-header {
+		text-align: center;
+		margin-bottom: 15px;
+
+		h2 {
+			font-size: 26px;
+			margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.social-list {
+	width: 100%;
+	overflow: hidden;
+
+	li {
+		float: left;
+		padding: 0 5px;
+
+		a {
+			font-size: 24px;
+			display: block;
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}
+#service-list {
+	ul {
+		overflow: hidden;
+		.service-block {
+			width: 50%;
+			float: left;
+			background-color: #f2f2f2;
+			div {
+				overflow: hidden;
+				.service-item {
+					width: 50%;
+					float: left;
+					background-color: @main-dark-color;
+					h3 {
+						margin-top: 0;
+						font-weight: 300;
+						font-family: "Roboto", sans-serif;
+						padding-bottom: 10px;
+						box-shadow: 0 1px 0 #fff;
+						border-bottom: 1px solid #ccc;
+					}
+					p {
+						font-family: "Roboto", sans-serif;
+					}
+				}
+				.service-intro {
+					padding: 50px;
+					background-color: transparent;
+				}
+				.arrow-left {
+					position: relative;
+					&:before {
+						content: '';
+						position: absolute;
+						top: 48%;
+						display: block;
+						border-top: 17px solid transparent;
+						border-left: 17px solid #f2f2f2;
+						border-right: 17px solid transparent;
+						border-bottom: 17px solid transparent;
+					}
+				}
+				.arrow-right {
+					position: relative;
+					&:before {
+						content: '';
+						position: absolute;
+						display: block;
+						top: 48%;
+						right: 0;
+						border-top: 17px solid transparent;
+						border-left: 17px solid transparent;
+						border-right: 17px solid #f2f2f2;
+						border-bottom: 17px solid transparent;
+					}
+				}
+			}
+		}
+	}
+	img {
+		width: 100%;
+	}
+}
+#product-mindset {
+	background: url('/images/met-stars.png') no-repeat top left;
+	background-color: #343c3f;
+	color: #fff;
+	padding: 100px 0;
+}
+#prd_mindsets {
+	overflow: hidden;
+	margin-top: 20px;
+	li {
+		overflow: hidden;
+		margin-bottom: 20px;
+		h3 {
+			font-size: 15px;
+			font-family: @general-font;
+			margin-top: 5px;
+			margin-left: 60px;
+		}
+	}
+	.prd_img_wrap {
+		display: block;
+		padding: 5px;
+		float: left;
+		border: 2px solid #f2f2f2;
+		.prd_img {
+			display: block;
+			width: 39px;
+			height: 39px;
+			margin: 0 auto;
+			background: url('/images/product_mindset.png') no-repeat;
+		}
+		.prd_img.stability {
+			background-position: 1px 2px;
+		}
+		.prd_img.seo {
+			background-position: -49px 1px;
+		}
+		.prd_img.maintain {
+			background-position: -99px 0;
+		}
+		.prd_img.uiux {
+			background-position: -150px 4px;
+		}
+		.prd_img.upgrade {
+			background-position: -195px 0;
+		}
+		.prd_img.performance {
+			background-position: -249px 1px;
+		}
+	}
+}
+#clients {
+	padding: 0 0 100px;
+	text-align: center;
+	li {
+		height: 40px;
+		padding: 0 30px;
+		display: inline-block;
+		img {
+			height: 100%;
+		}
+	}
+}
+#home-slider {
+	margin-bottom: 30px;
+	.item {
+		padding: 15px;
+		background-color: rgba(22,77,145,.9);
+		margin: 15px;
+		img {
+			width: 100%;
+		}
+		p {
+			margin: 10px 0 0;
+			color: #fff;
+		}
+	}
+}
+.pjt-img-slider {
+	img {
+		width: 100%;
+	}
+}
+.tech-list {
+	li {
+		display: inline-block;
+	}
+	i {
+		font-size: 30px
+	}
+}
+#contact {
+	position: relative;
+	height: 400px;
+	#map {
+		height: 400px;
+	}
+	#contact-info {
+		height: 100%;
+		position: absolute;
+		top: 60px; left: 0;
+		z-index: 10;
+		padding: 10px;
+		.home-blk {
+			padding: 30px;
+			background-color: #fff;
+			overflow: hidden;
+		}
+	}
+}
+#footer {
+	background: url('/images/met-stars.png') no-repeat top left;
+	background-color: @main-dark-color;
+	color: #fff;
+	padding: 20px 0 0;
+
+	#copyright {
+		color: #dedede;
+		padding: 10px 0 5px;
+		font-size: 11px;
+		font-family: sans-serif;
+	}
+}
+#subscriber  {
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+#wrap-logo-bot {
+	overflow: hidden;
+	margin: 10px
+}
+#logo-bot {
+	display: block;
+}
+.breadcrumb {
+	margin-top: 15px;
+}
+#process-circle {
+	h2 {
+		margin: 0;
+		padding: 15px 0;
+		text-transform: uppercase;
+		font-size: 25px;
+		font-weight: 600;
+		background-color: @main-light-color;
+	}
+	.prc-item {
+		color: #fff;
+		background: url('/images/services/next.png') no-repeat bottom center;
+		background-color: @main-dark-color;
+		padding: 30px 15px 70px;
+		h3 {
+			margin: 0 0 10px;
+		}
+		p {
+			font-family: "Roboto", sans-serif;
+			font-weight: 300;
+		}
+		img {
+			width: 100%;
+			margin-top: 10px;
+		}
+		&:last-child {
+			background-image: none;
+			padding-bottom: 20px;
+		}
+	}
+}
+.service-item-detail {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px dashed #ddd;
+	&:last-child {
+		border-bottom: none;
+	}
+	h2 {
+		font-size: 28px;
+		padding-bottom: 5px;
+		margin-bottom: 20px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: -4px; left: 0;
+			width: 100px;
+			border-bottom: 3px solid @main-light-color;
+		}
+	}
+	h4 {
+		margin: 30px 0 15px;
+	}
+	.pjt-list {
+		li {
+			display: inline-block;
+		}
+	}
+}
+.blog-item {
+	overflow: hidden;
+	margin-bottom: 10px;
+	h3 {
+		margin: 10px 0 5px;
+		font-size: 13px;
+	}
+	p {
+		font-size: 13px;
+	}
+}
+.feature-blog {
+	margin-bottom: 20px;
+}
+.fblog-item {
+	overflow: hidden;
+	margin-bottom: 10px;
+	h3 {
+		margin: 10px 0 5px;
+		font-size: 16px;
+	}
+}
+.blog-pic {
+	display: block;
+	width: 100%;
+	img {
+		width: 100%;
+	}
+}
+.detail-post {
+	font-size: 14px;
+	.blog-teaser {
+		font-weight: bold;
+	}
+    img {
+        max-width: 100%;
+        margin: 10px 0 15px;
+    }
+}
+// Desktop
+//
+@media (min-width: 768px) and (max-width: 1100px) {
+	header .intro-text {
+		padding-bottom: 50px;
+		.intro-lead-in {
+			width: auto;
+			margin: 0 auto 20px;
+		}
+		.intro-heading {
+			width: auto;
+			margin: 0 auto;
+			font-size: 38px;
+			line-height: 55px;
+			margin-bottom: 25px;
+		}
+	}
+}
+
+// Tablet
+//
+@media (min-width: 480px) and (max-width: 768px) {
+	#service-list {
+		ul {
+			.service-block {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// Phone
+//
+@media (max-width: 480px) {
+	.navbar-brand {
+		margin-left: 10px;
+	}
+	header {
+		#logo {
+			margin-left: 10px;
+		}
+		#particles-js {
+			height: 400px;
+		}
+		.intro-text {
+			padding-top: 130px;
+			.intro-heading {
+				font-size: 25px;
+				line-height: 35px;
+				margin-bottom: 10px;
+				width: auto;
+			}
+			.intro-lead-in {
+				font-size: 14px;
+				width: auto;
+				line-height: 20px;
+			}
+		}
+	}
+	#intro {
+		padding-top: 30px;
+	}
+	#service-list {
+		ul {
+			.service-block {
+				width: 100%;
+				div {
+					.service-intro {
+						padding: 10px;
+					}
+					.service-item {
+						h3 {
+							font-weight: 400;
+							font-size: 17px;
+							line-height: 19px;
+						}
+					}
+				}
+			}
+		}
+	}
+	#prd_mindsets {
+		margin-top: 0;
+		li {
+			h3 {
+				float: left;
+				margin: 5px 0;
+				font-size: 14px;
+			}
+		}
+	}
+	#home-slider {
+		padding: 50px 0;
+	}
+	#footer {
+		#wrap-logo-bot {
+			margin-left: 0;
+		}
+		#logo-bot {
+			background-size: 100px;
+			width: 90px;
+			height: 90px;
+			display: block;
+			margin: auto;
+		}
+		.extra-info {
+			margin-bottom: 30px;
+		}
+		#subscribe-form div {
+			overflow: hidden;
+		}
+		#btn-subscribe {
+			min-width: 100%;
+			font-size: 16px;
+		}
+	}
+}
